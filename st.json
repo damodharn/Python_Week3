@@ -1,0 +1,19 @@
+{
+  "stocks": [
+    {
+      "StockName": "kotak",
+      "StockPrice": 224,
+      "Shares": 40
+    },
+    {
+      "StockName": "mrf",
+      "StockPrice": 250,
+      "Shares": 30
+    },
+    {
+      "StockName": "kkbk mum",
+      "StockPrice": 12,
+      "Shares": 60
+    }
+  ]
+}
