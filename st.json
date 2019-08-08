@@ -3,7 +3,7 @@
     {
       "StockName": "kotak",
       "StockPrice": 224,
-      "Shares": 40
+      "Shares": 51
     },
     {
       "StockName": "mrf",
@@ -11,9 +11,9 @@
       "Shares": 30
     },
     {
-      "StockName": "kkbk mum",
-      "StockPrice": 12,
-      "Shares": 60
+      "StockName": "idbi",
+      "StockPrice": 30,
+      "Shares": 20
     }
   ]
 }

@@ -1,14 +1,9 @@
 {
   "stocks": [
     {
-      "StockName": "zee",
-      "StockPrice": 150,
-      "Shares": 30
-    },
-    {
-      "StockName": "Tata motors",
-      "StockPrice": 2500,
-      "Shares": 20
+      "StockName": "TCS",
+      "StockPrice": 25,
+      "Shares": 300
     }
   ]
 }

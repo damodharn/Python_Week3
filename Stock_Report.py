@@ -59,21 +59,23 @@ class Stock:                                          # class Stock created
                 print("Stock Deleted from File")
                 self.save()
                 self.print()
-                break
-            else:
-                print(f"No stock named {stock_name} found in the file {self.fileName}.\n"
-                      f"please check the stock name carefully.")
+                return
+        print(f"No stock named {stock_name} found in the file {self.fileName}.\n",
+              f"please check the stock name carefully.")
 
     def print(self):                     # method to print the json data.
         self.open()
         if len(self.lst['stocks']) >= 1:
-            print('-------------------Inventory Management-------------------')
-            print('___________________________________________________________')
-            print('StockName\t\t\tStockPrice\t\t\tShares')
-            print('___________________________________________________________')
+            print('----------- Inventory Management -----------')
+            print('_______________________________________')
+            print('{:<14} {:<15} {:<15} {:<15}'.format('Stock Name', 'Stock Price', 'Shares', 'Total Value'))
+            print('_______________________________________')
             for i in range(len(self.lst['stocks'])):
-                print(self.lst['stocks'][i]['StockName'], '\t\t\t', self.lst['stocks'][i]['StockPrice'], '\t\t\t',
-                      self.lst['stocks'][i]['Shares'])
+                print('{:<15} {:<15} {:<15} {:<10}Rs.'
+                      .format(self.lst['stocks'][i]['StockName'], self.lst['stocks'][i]['StockPrice']
+                              , self.lst['stocks'][i]['Shares']
+                              , self.lst['stocks'][i]['StockPrice']*self.lst['stocks'][i]['Shares']))
+            print('_______________________________________')
         else:
             print('No record found')
             ch = input('Do you want to add new Stock Value: Y/N')
@@ -94,28 +96,35 @@ class Stock:                                          # class Stock created
         except FileExistsError as e:
             print(e)
         else:
+            f2.close()
             total = 0
             print('\n')
-            print('\t\t\t*****STOCK REPORT*****')  # printing table for stock report
+            print('\t\t\t\t*****  STOCK REPORT  *****')  # printing table for stock report
 
-            print('___---___---___---___---___---___---___---___---___---___---___')
-            print('StockName\t StockPrice\t Shares\t Stock Value. |')
-            print('_______________________________________________________________')
+            print('----|-----------------|-----------------|-----------------|----------------------|')
+            print('{:<4}'.format('NO. |'), end=' ')
+            for i in stock_data['stocks'][0]:
+                print('{:<16}|'.format(i), end=' ')
+            print("Total Value / Stock  |")
+            print('____|_________________|_________________|_________________|______________________|')
             for i in range(len(stock_data['stocks'])):
                 total += stock_data['stocks'][i]['StockPrice'] * stock_data['stocks'][i]['Shares']
-                print(stock_data['stocks'][i]['StockName'], '\t\t\t', stock_data['stocks'][i]['StockPrice'], '\t\t\t',
-                      stock_data['stocks'][i]['Shares'], '\t\t\t'
-                      , stock_data['stocks'][i]['StockPrice'] * stock_data['stocks'][i]['Shares'], 'Rs.\t\t|')
-            print("_______________________________________________________________")
-            print("Total Value of Stocks: ", total, 'Rs.\n___________________________________'
-                                                    '___________________________')
+                print('{:<4}| {:<16s}| {:<16d}| {:<16d}| {:>16d} Rs. |'
+                      .format(i+1, stock_data['stocks'][i]['StockName']
+                              , stock_data['stocks'][i]['StockPrice'], stock_data['stocks'][i]['Shares']
+                              , stock_data['stocks'][i]['StockPrice'] * stock_data['stocks'][i]['Shares']))
+            print('____|_________________|_________________|_________________|______________________|')
+            print("YOUR PORTFOLIO:\nTotal Value of all the Stocks: ", total, 'Rs.')
+            print('__________________________________________________________________________________')
 
 #  *****************************  Main Method  *********************************
 
 
 def main():
     try:
-        filename = input("Enter a File Name to be created or opened.")
+        print("______________________________________________________\n_____________ "
+              "***  INVENTORY MANAGER  ***_____________\n______________________________________________________")
+        filename = input("Enter a File Name to be created or opened(If already exist.):")
         st = Stock(filename)  # assigning object to Stock class
         print('Enter:\n1: To add stocks into new file.\n2: To add stocks into existing file.\n'
               '3: To print the inventory.\n4: To remove items.\n5: To DISPLAY PORTFOLIO.\n6: To quit.')
@@ -133,6 +142,7 @@ def main():
             st.print()
         elif choice == 4:  # for removing stock items from the object.
             st.delete()
+            print("")
         elif choice == 5:  # for Displaying Portfolio.
             st.stock_cal()
         elif choice == 6:  # To exit.
