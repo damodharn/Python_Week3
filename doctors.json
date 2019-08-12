@@ -1,0 +1,32 @@
+{
+  "docs": [
+    {
+      "Name": "Ajay Patil",
+      "ID": 1234,
+      "Spcl": "Ortho",
+      "Avail": "AM",
+      "cnt": 0
+    },
+    {
+      "Name": "Sayali Savant",
+      "ID": 2345,
+      "Spcl": "Gynac",
+      "Avail": "AM",
+      "cnt": 1
+    },
+    {
+      "Name": "Abc Khan",
+      "ID": 3456,
+      "Spcl": "Radio",
+      "Avail": "PM",
+      "cnt": 0
+    },
+    {
+      "Name": "Ram Kumar",
+      "ID": 4567,
+      "Spcl": "Cardio",
+      "Avail": "PM",
+      "cnt": 0
+    }
+  ]
+}

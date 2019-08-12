@@ -1,13 +1,6 @@
 {
   "stocks": [
     {
-      "StockName": "hdfc",
-      "StockPrice": 110,
-      "Shares": 114,
-      "Date": "Aug 09, 2019",
-      "Time": "12:57:50"
-    },
-    {
       "StockName": "HDFC123",
       "StockPrice": 15,
       "Shares": 12,

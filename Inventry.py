@@ -5,24 +5,6 @@
 from Inventory_mangt import *                            # importing temp2 module
 
 
-# def inventory():                                     # function to calculate the value for item
-#     try:
-#         with open('Inventory_management.json', 'r') as f1:         # opening json file in read mode
-#             my_data = json.load(f1)
-#         print('\n*************************************************************\n')
-#
-#         print('Name', '\t|\t', 'Price * Weight')
-#         print('----------------------------')
-#         for j in my_data:
-#             for i in range(len(my_data[j])):  # for loop used to calculate the json price and weight
-#                 a = my_data[j][i]["Name"]
-#                 b = my_data[j][i]["price"] * my_data["data"][i]["weight"]
-#                 print(f"{a}\t\t\t{b}\t$")
-#
-#     except IOError:                                           # exception handling for json file
-#         print('File not present')
-
-
 def main():
     i = Inventory()  # Assigning object to the Inventory class
     try:

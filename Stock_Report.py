@@ -66,16 +66,16 @@ class Stock:                                          # class Stock created
     def print(self):                     # method to print the json data.
         self.open()
         if len(self.lst['stocks']) >= 1:
-            print('----------- Inventory Management -----------')
-            print('_______________________________________')
+            print('----------------- Inventory Management -----------------')
+            print('________________________________________________________')
             print('{:<14} {:<15} {:<15} {:<15}'.format('Stock Name', 'Stock Price', 'Shares', 'Total Value'))
-            print('_______________________________________')
+            print('________________________________________________________')
             for i in range(len(self.lst['stocks'])):
                 print('{:<15} {:<15} {:<15} {:<10}Rs.'
                       .format(self.lst['stocks'][i]['StockName'], self.lst['stocks'][i]['StockPrice']
                               , self.lst['stocks'][i]['Shares']
                               , self.lst['stocks'][i]['StockPrice']*self.lst['stocks'][i]['Shares']))
-            print('_______________________________________')
+            print('________________________________________________________')
         else:
             print('No record found')
             ch = input('Do you want to add new Stock Value: Y/N')
