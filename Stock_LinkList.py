@@ -6,7 +6,7 @@ import json
 import pathlib
 from datetime import*
 from Stock_Account import*
-from tets22 import LinkList
+from LinkList1 import LinkList
 
 
 class CompanyShares:

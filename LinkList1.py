@@ -1,5 +1,3 @@
-
-
 from datetime import*
 from Stock_Report import Stock
 

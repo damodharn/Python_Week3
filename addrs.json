@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "first_name": "abcd",
+      "last_name": "patil",
+      "mobile": "1234567689",
+      "address": "qwert",
+      "zip_code": "974121",
+      "city": "pune",
+      "state": "telangana"
+    },
+    {
+      "first_name": "cdef",
+      "last_name": "khan",
+      "mobile": "9876543210",
+      "address": "qwerty",
+      "zip_code": "444000",
+      "city": "pune",
+      "state": "up"
+    }
+  ]
+}

@@ -1,15 +1,20 @@
+# *********************************************************************************************
+# Purpose: To write a program to create Clinic Management System.
+# Author:  Damodhar D. Nirgude.
+# *********************************************************************************************
+
 import json
 
 
 class Clinic:
-    def __init__(self):
+    def __init__(self):  # Initializing Clinic class.
         self.lst = {"docs": []}
         self.appmt = {}
 
     def search_name(self, who, name):  # Searches Doctor / Patient by his/her Name.
-        if who == 'dc':
+        if who == 'dc':  # Searches name in Doctor's data.
             try:
-                with open("doctors.json", "r") as f1:
+                with open("doctors.json", "r") as f1:  # Open's Doctor's file.
                     self.lst = json.load(f1)
                     f1.close()
             except FileNotFoundError as e:
@@ -23,9 +28,9 @@ class Clinic:
                                                                       self.lst["docs"][i]["ID"],
                                                                       self.lst["docs"][i]["Spcl"],
                                                                       self.lst["docs"][i]["Avail"]))
-        elif who == 'pt':
+        elif who == 'pt':  # Searches name in patient's data.
             try:
-                with open("patients.json", "r") as f1:
+                with open("patients.json", "r") as f1:  # Opens patient's file.
                     self.lst = json.load(f1)
                     f1.close()
             except FileNotFoundError as e:
@@ -39,9 +44,9 @@ class Clinic:
                                                            , self.lst["pat"][i]["ID"], self.lst["pat"][i]["Mob"]))
 
     def display(self, who):
-        if who == 'dc':
+        if who == 'dc':  # Display list for Doctors in the clinic.
             try:
-                with open("doctors.json", "r") as f1:
+                with open("doctors.json", "r") as f1:  # Opens Doctors data file.
                     self.lst = json.load(f1)
                     f1.close()
             except FileNotFoundError as e:
@@ -58,9 +63,9 @@ class Clinic:
                 else:
                     print("No Doctor in the Clinic.")
 
-        elif who == 'pt':
+        elif who == 'pt':  # Display for Patients.
             try:
-                with open("patients.json", "r") as f1:
+                with open("patients.json", "r") as f1:  # Opens patient's data file.
                     self.lst = json.load(f1)
                     f1.close()
             except FileNotFoundError as e:
@@ -75,7 +80,7 @@ class Clinic:
                 else:
                     print("No patient in Clinic.")
 
-    def appointment(self):
+    def appointment(self):  # method to search for availability of Doctor and is yes then fix appointment.
         try:
             self.lst = {"pat": []}
             with open("patients.json", "r") as f1:
@@ -111,6 +116,7 @@ class Clinic:
         with open('doctors.json', 'w') as f1:
             json.dump(self.lst, f1, indent=2)
             f1.close()
+
 
 def main():
     cl = Clinic()

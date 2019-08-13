@@ -3,16 +3,23 @@
     {
       "StockName": "HDFC123",
       "StockPrice": 15,
-      "Shares": 12,
-      "Date": "Aug 09, 2019",
-      "Time": "12:53:44"
+      "Shares": 9,
+      "Date": "Aug 13, 2019",
+      "Time": "13:39:47"
     },
     {
       "StockName": "dfc123",
       "StockPrice": 15,
-      "Shares": 10,
-      "Date": "Aug 09, 2019",
-      "Time": "12:53:44"
+      "Shares": 13,
+      "Date": "Aug 13, 2019",
+      "Time": "13:13:30"
+    },
+    {
+      "StockName": "jio",
+      "StockPrice": 200,
+      "Shares": 120,
+      "Date": "Aug 13, 2019",
+      "Time": "13:14:09"
     }
   ]
 }

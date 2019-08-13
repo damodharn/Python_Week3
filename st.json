@@ -6,13 +6,13 @@
       "Shares": 51
     },
     {
-      "StockName": "mrf",
-      "StockPrice": 250,
+      "StockName": "idbi",
+      "StockPrice": 180,
       "Shares": 30
     },
     {
-      "StockName": "idbi",
-      "StockPrice": 30,
+      "StockName": "mrf",
+      "StockPrice": 430,
       "Shares": 20
     }
   ]

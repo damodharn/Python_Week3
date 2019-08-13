@@ -1,3 +1,4 @@
+
 import json                                           # importing json module
 
 
@@ -40,7 +41,7 @@ class Inventory:
                         dix['price'] = price
                         self.lst[i].append(dix.copy())  # Adding each item into the dictionary dix.
             self.save()  # To save file in json file.
-            self.print_i()  # Printing In enventories added by user.
+            self.print_i()  # Printing In inventories added by user.
         except ValueError:
             print('Enter valid details!')
 

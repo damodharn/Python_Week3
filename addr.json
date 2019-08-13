@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "first_name": "Damodhar",
+      "last_name": "Patil",
+      "mobile": "9876543212",
+      "address": "gdgf",
+      "zip_code": "434343",
+      "city": "Mumn",
+      "state": "Maha"
+    },
+    {
+      "first_name": "abcd",
+      "last_name": "efgh",
+      "mobile": "987654321",
+      "address": "asdfghj",
+      "zip_code": "432143",
+      "city": "mum",
+      "state": "maha"
+    }
+  ]
+}
